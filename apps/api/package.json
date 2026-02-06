@@ -1,0 +1,41 @@
+{
+  "name": "@thinktank/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc && tsc-alias",
+    "start": "node dist/index.js",
+    "lint": "eslint src --ext .ts",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist .turbo node_modules",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.8.2",
+    "@hono/zod-validator": "^0.2.0",
+    "bcrypt": "^5.1.1",
+    "drizzle-orm": "^0.29.3",
+    "hono": "^4.0.8",
+    "jose": "^5.2.2",
+    "pg": "^8.11.3",
+    "postgres": "^3.4.3",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@thinktank/eslint-config": "*",
+    "@thinktank/typescript-config": "*",
+    "@types/bcrypt": "^5.0.2",
+    "@types/node": "^22.0.0",
+    "@types/pg": "^8.11.0",
+    "drizzle-kit": "^0.20.14",
+    "eslint": "^8.57.0",
+    "tsc-alias": "^1.8.8",
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3"
+  }
+}
